@@ -1,0 +1,338 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4CAF50;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    direction: rtl;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.night-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+#app {
+    max-width: 400px;
+    margin: 0 auto;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#app.night-mode {
+    background-color: #2d2d2d;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.game-mode-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.gameModeBtn.selected {
+    background-color: #e64a19;
+}
+
+button:hover {
+    background-color: #e64a19;
+}
+
+body.night-mode button {
+    background-color: #ff7043;
+}
+
+body.night-mode button:hover {
+    background-color: #f4511e;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+#gameArea {
+    display: none;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+body.night-mode .card {
+    background-color: #424242;
+}
+
+.letter {
+    background: #FF5722;
+    color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+body.night-mode .letter {
+    background: #ff7043;
+}
+
+.cell {
+    background: white;
+    color: black;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body.night-mode .cell {
+    background: #616161;
+    color: #e0e0e0;
+}
+
+.cell.marked {
+    background: #4CAF50;
+    font-weight: bold;
+}
+
+body.night-mode .cell.marked {
+    background: #66bb6a;
+}
+
+.star {
+    color: gold;
+    font-size: 1.5em;
+}
+
+#calledNumbers {
+    background-color: #fff;
+    color: #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+body.night-mode #calledNumbers {
+    background-color: #424242;
+    color: #66bb6a;
+}
+
+#inactiveNumbers {
+    margin-bottom: 10px;
+}
+
+.inactive {
+    color: gray;
+    text-decoration: line-through;
+}
+
+body.night-mode .inactive {
+    color: #bdbdbd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+body.night-mode th, body.night-mode td {
+    border-color: #616161;
+}
+
+th {
+    background-color: #FF5722;
+    color: white;
+}
+
+body.night-mode th {
+    background-color: #ff7043;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.admin-form input, .admin-form button, .admin-form select {
+    padding: 8px;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+body.night-mode .admin-form input, body.night-mode .admin-form select {
+    background-color: #424242;
+    color: #e0e0e0;
+    border: 1px solid #616161;
+}
+
+.player-info {
+    position: static;
+    margin-top: 10px;
+    background-color: transparent;
+    padding: 0;
+    width: 100%;
+    font-size: 1em;
+}
+
+body.night-mode .player-info {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.number-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.number-btn {
+    background-color: #FF9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+body.night-mode .number-btn {
+    background-color: #f57c00;
+}
+
+.number-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+body.night-mode .number-btn:disabled {
+    background-color: #757575;
+}
+
+#postWinMessage {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #FF5722;
+}
+
+body.night-mode #postWinMessage {
+    color: #ff7043;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    background-color: #4CAF50;
+    padding: 10px;
+    font-size: 0.8em;
+    color: #fff;
+}
+body.night-mode footer {
+    background-color: #1a1a1a;
+    color: #bdbdbd;
+}
+.night-mode-toggle {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.night-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}

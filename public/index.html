@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ዜቢ ቢንጎ - Web App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="welcomePage" class="content" style="display: none;">
+            <h2>እንኳን ወደ ዜቢ ቢንጎ በደህና መጡ!</h2>
+        <p>አስደሳች የቢንጎ ጨዋታ ይቀላቀሉ!</p>
+        <button id="startBtn">ጀምር</button>
+    </div>
+    <div id="registerPage" class="content" style="display: none;">
+        <h2>ይመዝገቡ</h2>
+        <input id="phoneInput" type="text" placeholder="ስልክ ቁጥር">
+        <input id="nameInput" type="text" placeholder="ስም">
+        <input id="usernameInput" type="text" placeholder="የተጠቃሚ ስም">
+        <input id="referralInput" type="text" placeholder="የሪፈራል ኮድ (አማራጭ)">
+        <button id="registerBtn">መዝገብ</button>
+        <p id="registerError" style="color: red;"></p>
+    </div>
+        </div>
+
+    <div id="mainPage" class="content" style="display: none;">
+    <h2>የጨዋታ ሁነታ ይምረጡ</h2>
+    <div class="game-mode-buttons">
+        <button class="gameModeBtn" data-mode="10">10 ETB</button>
+        <button class="gameModeBtn" data-mode="50">50 ETB</button>
+        <button class="gameModeBtn" data-mode="100">100 ETB</button>
+        <button class="gameModeBtn" data-mode="200">200 ETB</button>
+    </div>
+    <button id="joinBtn" disabled>ተቀላቀል</button>
+    </div>
+        <h1>ዜቢ ቢንጎ</h1>
+        <nav class="menu">
+            <button id="homeBtn">🏠 መነሻ</button>         <button id="checkBalance">💰 የዋሌት ገጽ</button>
+            <button id="topLeaders">🏆 የመሪዎች ዝርዝር</button>
+           
+            <div id="inviteFriendsPanel" style="display:none;">
+                <h3> ጓደኞችን ለመጋበዝ</h3>
+                <div id="friendsList"></div>
+                <button onclick="sendInvites()">Send Invites</button>
+            </div>
+    <div id="profilePage" class="content" style="display: none;">
+    <h2>ፕሮፋይል ገጽ</h2>
+    <button id="withdrawMoney">💸 ገንዘብ ለማውጣት</button>
+    <button id="topLeaders">🏆 የመሪዎች ዝርዝር</button>
+    
+</div>    
+
+            <button id="adminMenu" style="display: none;">🛠 አስተዳዳሪ ገጽ</button>
+        </nav>
+        <div id="gameArea" class="content">
+            <div id="calledNumbers" style="margin-bottom: 10px; color: green;"></div>
+            <div id="bingoCard" class="card"></div>
+            <div id="gameStatus">Status: Not Started</div>
+            <button id="callBtn">🔢 Call Number</button>
+            <button id="bingoBtn">🎉 Check Bingo</button>
+            <button id="joinGame">👥 Join Game</button>
+        </div>
+        <div id="content" class="content" style="display:none;"></div>
+        <div id="playerInfo" class="player-info"></div>
+        <footer>
+            <p id="devInfo">Developed by Benzion Creatives 2025</p>
+        </footer>
+    </div>
+    <div id="nightModeToggle" class="night-mode-toggle">
+        <label class="switch" for="nightModeSwitch">
+            <input type="checkbox" id="nightModeSwitch">
+            <span class="slider"></span>
+        </label>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
