@@ -8,9 +8,9 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_FOLDER = os.path.join(BASE_DIR, '../public')
 
-TOKEN = os.environ.get('TOKEN', '8119390210:AAFjN2YTSaPEyae9N9otMZ6kaNoo4-gns18')  # Fallback to hardcoded value
-WEB_APP_URL = os.environ.get('WEB_APP_URL', 'http://bingo-webapp.vercel.app')
-ADMIN_IDS = [int(x) for x in os.environ.get('ADMIN_IDS', '5380773431').split(',')]
+TOKEN = os.environ.get('TOKEN')  # Fallback to hardcoded value
+WEB_APP_URL = os.environ.get('WEB_APP_URL')
+ADMIN_IDS = [int(x) for x in os.environ.get('ADMIN_IDS').split(',')]
 DATABASE_URL = os.environ.get('DATABASE_URL')
 
 app = Flask(__name__, static_folder=STATIC_FOLDER, static_url_path='')
