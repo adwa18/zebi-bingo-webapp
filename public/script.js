@@ -3,7 +3,7 @@ const tg = window.Telegram.WebApp;
 tg.expand();
 tg.setViewportHeight(window.innerHeight)
 const userId = tg.initDataUnsafe?.user?.id || new URLSearchParams(window.location.search).get('user_id');
-const API_URL = 'https://bingo-webapp.vercel.app/api'; // Update with your Heroku URL
+const API_URL = 'https://zebi-bingo-webapp-kcoreoew2-tewodros-ephrems-projects.vercel.app'; // Update with your Heroku URL
 const playerInfo = document.getElementById('playerInfo');
 let gameId = null;
 let selectedNumber = null;
